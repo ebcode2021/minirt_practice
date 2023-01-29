@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minirt.h                                           :+:      :+:    :+:   */
+/*   error.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eunbison <eunbison@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/29 17:57:00 by eunbison          #+#    #+#             */
-/*   Updated: 2023/01/29 19:52:05 by eunbison         ###   ########.fr       */
+/*   Created: 2023/01/29 17:54:37 by eunbison          #+#    #+#             */
+/*   Updated: 2023/01/29 19:55:39 by eunbison         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_H
-# define MINIRT_H
+#ifndef ERROR_H
+# define ERROR_H
 
-/* includes*/
-#include "const.h"
-#include "element.h"
-#include "error.h"
-#include "struct.h"
-
-/* library */
-#include "libft.h"
-#include "mlx.h"
-
-/* extern library */
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#define ARGC_ERROR "Check aruguments.\n Only support one parameter which ends \'.rt\' extension"
 
 #endif

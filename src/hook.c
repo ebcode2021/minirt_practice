@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minirt.h                                           :+:      :+:    :+:   */
+/*   hook.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eunbison <eunbison@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/29 17:57:00 by eunbison          #+#    #+#             */
-/*   Updated: 2023/01/29 19:52:05 by eunbison         ###   ########.fr       */
+/*   Created: 2023/01/29 19:25:22 by eunbison          #+#    #+#             */
+/*   Updated: 2023/01/29 19:59:04 by eunbison         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_H
-# define MINIRT_H
+#include "minirt.h"
 
-/* includes*/
-#include "const.h"
-#include "element.h"
-#include "error.h"
-#include "struct.h"
+static int	validated_keycode(int key)
+{
+	
+}
 
-/* library */
-#include "libft.h"
-#include "mlx.h"
+int	key_hook(int keycode, t_mlx *ptr)
+{
+	if (validated_keycode(keycode))
+	{
 
-/* extern library */
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+	}
+	return (0);
+}
 
-#endif
+int	mouse_hook(t_mlx *ptr)
+{
+	mlx_destroy_image(ptr->mlx_ptr, ptr->win_ptr);
+	free_scene();
+	exit(EXIT_SUCCESS);
+	return (0);
+}

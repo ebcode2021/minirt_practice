@@ -1,32 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minirt.h                                           :+:      :+:    :+:   */
+/*   struct.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eunbison <eunbison@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/29 17:57:00 by eunbison          #+#    #+#             */
-/*   Updated: 2023/01/29 19:52:05 by eunbison         ###   ########.fr       */
+/*   Created: 2023/01/29 19:12:42 by eunbison          #+#    #+#             */
+/*   Updated: 2023/01/29 19:46:24 by eunbison         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINIRT_H
-# define MINIRT_H
+#include "minirt.h"
 
-/* includes*/
-#include "const.h"
-#include "element.h"
-#include "error.h"
-#include "struct.h"
+typedef struct s_pixel
+{
 
-/* library */
-#include "libft.h"
-#include "mlx.h"
+}				t_pixel;
 
-/* extern library */
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+typedef struct s_scene
+{
+	t_pixel	**map;
+	void	*addr;
+	int		bits_per_pixel;
+	int		size_line;
+	int		endian;
+}				t_scene;
 
-#endif
+typedef struct s_ray
+{
+
+}				t_ray;
+
+typedef struct s_camera
+{
+
+}				t_camera;
+
+typedef struct s_mlx
+{
+	void	*mlx_ptr;
+	void	*win_ptr;
+	void	*img_ptr;
+	t_scene	scene;
+}				t_mlx;
