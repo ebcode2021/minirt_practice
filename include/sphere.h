@@ -6,7 +6,7 @@
 /*   By: eunson <eunson@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 17:09:50 by eunson            #+#    #+#             */
-/*   Updated: 2023/02/03 19:36:56 by eunson           ###   ########.fr       */
+/*   Updated: 2023/02/04 11:49:04 by eunson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,9 @@ bool sphere::hit(const ray& r, double t_min, double t_max, hit_record& rec) cons
 	
 	rec.t = root; // 길이
 	rec.p = r.at(rec.t); // 적중점
-	rec.normal = (rec.p - center) / radius; // 법선의 단위벡터
-
+	vec3 outward_normal = (rec.p - center) / radius;
+	rec.set_face_noraml(r, outward_normal);
+	//rec.normal = (rec.p - center) / radius; // 법선의 단위벡터
 	return true;
 }
 
